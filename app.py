@@ -11,11 +11,12 @@ for el in soup.select('div.embed'):
   el.decompose()
 
 horoscope_title = soup.find('h1', attrs={'class': 'content-hed'}).text.strip()
-date =  soup.find('time', attrs={'class': 'content-info-date'}).text.strip()
-author = soup.find('span', attrs={'class': 'byline-name'}).text.strip()
+date = soup.find('time', attrs={'class': 'content-info-date'}).text.strip()
+authorElement = soup.find('span', attrs={'class': 'byline-name'})
+authorString =  authorElement.text.strip() if authorElement else ''
 
 print(horoscope_title, '\n')
-print(author, '\n')
+print(authorString, '\n')
 print(date, '\n')
 
 #content

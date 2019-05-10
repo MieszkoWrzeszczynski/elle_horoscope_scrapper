@@ -5,7 +5,10 @@ This repository contains application which scraps horoscope articles from [Elle.
 
 ### Running
 ```bash
-for line in $(cat ./links); do name=$(basename $line); python3 app.py $line > out/$name  ; done
+LINKS="./links.txt"
+OUTPUT_DIR="./out"
+
+for line in $(cat $LINKS); do name=$(basename $line); python3 app.py $line > $OUTPUT_DIR/$name  ; done
 ```
 
 #### Output format
@@ -17,5 +20,5 @@ Author
 
 Date
 
-Content 
+Content
 ```
