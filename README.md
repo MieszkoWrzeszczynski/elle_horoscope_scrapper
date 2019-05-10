@@ -1,6 +1,6 @@
 # Elle web scrapper
 
-##
+## Desc
 This repository contains application which scraps horoscope articles from [Elle.com](https://www.elle.com/it/oroscopo/).
 
 ### Running
